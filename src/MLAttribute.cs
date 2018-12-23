@@ -3,8 +3,7 @@
 namespace Bau.Libraries.LibMarkupLanguage
 {
 	/// <summary>
-	///		Datos de un atributo modificado en un módulo
-	///		
+	///		Datos de un atributo
 	/// </summary>
 	public class MLAttribute : MLItemBase
 	{
