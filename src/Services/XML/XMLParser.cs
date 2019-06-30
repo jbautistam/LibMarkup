@@ -158,10 +158,10 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		//			if (objColXMLAttributes != null)
 		//				foreach (XmlAttribute objXMLAttribute in objColXMLAttributes)
 		//					if (objXMLAttribute.Prefix == "xmlns")
-		//						{ MLNameSpace objNameSpace = new MLNameSpace(objXMLAttribute.LocalName, Decode(objXMLAttribute.InnerText));
+		//						{ MLNameSpace nameSpace = new MLNameSpace(objXMLAttribute.LocalName, Decode(objXMLAttribute.InnerText));
 
 		//								// Añade el espacio de nombres
-		//									objColNameSpaces.Add(objNameSpace);
+		//									objColNameSpaces.Add(nameSpace);
 		//						}
 		//		// Devuelve los espacios de nombres
 		//			return objColNameSpaces;

@@ -15,13 +15,13 @@ namespace Bau.Libraries.LibMarkupLanguage
 			string debug = "";
 
 				// Añade la cadena de atributos
-				foreach (MLAttribute objAttribute in this)
+				foreach (MLAttribute attribute in this)
 				{ 
 					// Añade el separador
 					if (!string.IsNullOrEmpty(debug))
 						debug += ",";
 					// Añade el nombre y valor del atributo
-					debug += $"{objAttribute.Name}: {objAttribute.Value}";
+					debug += $"{attribute.Name}: {attribute.Value}";
 				}
 				// Devuelve la cadena de atributos
 				return debug;

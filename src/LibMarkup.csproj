@@ -1,8 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+	  <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Bau.Libraries.LibMarkupLanguage</RootNamespace>
+    <PackageId>Bau.Libraries.LibMarkup</PackageId>
+    <Authors>Jose Antonio Bautista Montejo</Authors>
+    <Company>Jose Antonio Bautista Montejo</Company>
+    <Description>Biblioteca de ayuda para tratamiento de archivos XML</Description>
+    <Copyright>Creative Commons</Copyright>
+    <RepositoryUrl>https://github.com/jbautistam/LibMarkup</RepositoryUrl>
+    <RepositoryType>Public</RepositoryType>
+    <PackageTags>helper, xml</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

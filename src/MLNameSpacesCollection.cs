@@ -55,12 +55,12 @@ namespace Bau.Libraries.LibMarkupLanguage
 			}
 			set
 			{
-				MLNameSpace objNameSpace = Search(prefix);
+				MLNameSpace nameSpace = Search(prefix);
 
-					if (objNameSpace == null)
+					if (nameSpace == null)
 						Add(prefix, value.NameSpace);
 					else
-						objNameSpace.NameSpace = value.NameSpace;
+						nameSpace.NameSpace = value.NameSpace;
 			}
 		}
 	}
