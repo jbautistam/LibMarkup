@@ -42,7 +42,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.Files
 		/// </summary>
 		internal static bool MakePath(string path)
 		{ 
-			return MakePath(path, out string error);
+			return MakePath(path, out _);
 		}
 
 		/// <summary>

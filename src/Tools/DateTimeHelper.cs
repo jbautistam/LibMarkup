@@ -151,8 +151,6 @@ namespace Bau.Libraries.LibMarkupLanguage.Tools
 									"ddd',' dd MMM yyyy HH:mm:ss zzz"
 								};
 
-				// Inicializa el resultado
-				result = DateTime.MinValue;
 				// Comprueba el parámetro y, si es correcto, convierte el resultado
 				if (string.IsNullOrEmpty(value))
 				{

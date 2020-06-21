@@ -18,27 +18,17 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		/// </summary>
 		public MLFile Load(string fileName)
 		{
-			return Load(fileName, out string error);
-		}
-
-		/// <summary>
-		///		Carga un archivo
-		/// </summary>
-		public MLFile Load(string fileName, out string error)
-		{
-			// Inicializa los argumentos de salida
-			error = string.Empty;
-			// Carga el archivo
-			try
-			{
-				return ParseText(Files.FileTools.LoadTextFile(fileName));
-			}
-			catch (Exception exception)
-			{
-				error = $"Error al cargar el archivo {fileName}. {exception.Message}";
-			}
-			// Si ha llegado hasta aquí es porque ha habido algún error
-			return null;
+			if (!System.IO.File.Exists(fileName))
+				return new MLFile();
+			else
+				try
+				{
+					return ParseText(Files.FileTools.LoadTextFile(fileName));
+				}
+				catch (Exception exception)
+				{
+					throw new ParserException($"Error when parse XML file {fileName}", fileName, exception);
+				}
 		}
 
 		/// <summary>

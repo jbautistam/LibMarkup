@@ -16,7 +16,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		/// </summary>
 		public bool Save(string fileName, MLFile fileML)
 		{
-			return Save(fileName, fileML, out string error);
+			return Save(fileName, fileML, out _);
 		}
 
 		/// <summary>
