@@ -7,6 +7,5 @@ namespace Bau.Libraries.LibMarkupLanguage
 	/// </summary>
 	public class MLAttribute : MLItemBase
 	{
-
 	}
 }
