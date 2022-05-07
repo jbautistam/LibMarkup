@@ -36,25 +36,26 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		/// </summary>
 		public MLFile ParseText(string text)
 		{
-			if (string.IsNullOrEmpty(text))
+			if (string.IsNullOrWhiteSpace(text))
 				return new MLFile();
 			else
-				return Load(XmlReader.Create(new System.IO.StringReader(text)));
+				return Load(XmlReader.Create(new System.IO.StringReader(text), GetXmlReaderSettings()));
 		}
 
 		/// <summary>
-		///		Abre un Reader XML sin comprobación de caracteres extraños
+		///		Obtiene las setting para la lectura de XML
 		/// </summary>
-		private XmlReader Open(string fileName)
+		private XmlReaderSettings GetXmlReaderSettings()
 		{
 			XmlReaderSettings settings = new XmlReaderSettings();
 
 				// Carga el documento
 				settings.CheckCharacters = false;
 				settings.CloseInput = true;
-				settings.DtdProcessing = DtdProcessing.Ignore;
-				// Devuelve el documento XML abierto
-				return XmlReader.Create(fileName, settings);
+				settings.DtdProcessing = DtdProcessing.Parse;
+				settings.MaxCharactersFromEntities = 1024;
+				// Devuelve la configuración
+				return settings;
 		}
 
 		/// <summary>
