@@ -34,6 +34,33 @@ namespace Bau.Libraries.LibMarkupLanguage
 		}
 
 		/// <summary>
+		///		Añade un nodo a la colección si no está vacío
+		/// </summary>
+		public void AddIfNotEmpty(string name, string value)
+		{
+			if (!string.IsNullOrWhiteSpace(value))
+				Add(null, name, value);
+		}
+
+		/// <summary>
+		///		Añade un nodo a la colección si no está vacío
+		/// </summary>
+		public void AddIfNotEmpty(string name, DateTime? value)
+		{
+			if (value != null)
+				Add(null, name, value);
+		}
+
+		/// <summary>
+		///		Añade un nodo a la colección
+		/// </summary>
+		public void AddIfNotEmpty(string name, double? value)
+		{
+			if (value != null)
+				Add(null, name, MLItemBase.Format(value));
+		}
+
+		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
 		public TypeData Add(string name, bool value)
@@ -114,7 +141,7 @@ namespace Bau.Libraries.LibMarkupLanguage
 		/// <summary>
 		///		Indizador por el nombre del elemento
 		/// </summary>
-		public TypeData this [string name]
+		public TypeData this[string name]
 		{
 			get
 			{
