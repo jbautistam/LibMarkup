@@ -10,17 +10,14 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.FilesDebug
 		/// <summary>
 		///		Depura un archivo de nodos
 		/// </summary>
-		public string Debug(MLFile fileML)
-		{
-			return Debug(fileML.Nodes, 0);
-		}
+		public string Debug(MLFile fileML) => Debug(fileML.Nodes, 0);
 
 		/// <summary>
 		///		Depura una colección de nodos
 		/// </summary>
 		private string Debug(MLNodesCollection nodesML, int indent)
 		{
-			string debug = "";
+			string debug = string.Empty;
 
 				// Depura los nodos
 				foreach (MLNode nodeML in nodesML)
@@ -67,9 +64,6 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.FilesDebug
 		/// <summary>
 		///		Obtiene la cadena de indentación
 		/// </summary>
-		private string GetIndent(int indent)
-		{
-			return new string(' ', indent);
-		}
+		private string GetIndent(int indent) => new string(' ', indent);
 	}
 }

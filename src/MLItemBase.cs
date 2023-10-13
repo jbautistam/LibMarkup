@@ -67,7 +67,7 @@ namespace Bau.Libraries.LibMarkupLanguage
 		internal static string Format(double? value)
 		{
 			if (value == null)
-				return "";
+				return string.Empty;
 			else
 				return value.ToString().Replace(',', '.');
 		}
@@ -78,7 +78,7 @@ namespace Bau.Libraries.LibMarkupLanguage
 		internal static string Format(DateTime? value)
 		{
 			if (value == null)
-				return "";
+				return string.Empty;
 			else
 				return string.Format("{0:yyyy-MM-dd HH:mm:ss}", value);
 		}

@@ -40,10 +40,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.Files
 		/// <summary>
 		///		Crea un directorio sin tener en cuenta las excepciones
 		/// </summary>
-		internal static bool MakePath(string path)
-		{
-			return MakePath(path, out _);
-		}
+		internal static bool MakePath(string path) => MakePath(path, out _);
 
 		/// <summary>
 		///		Crea un directorio sin tener en cuenta las excepciones
@@ -102,10 +99,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.Files
 		/// <summary>
 		/// 	Carga un archivo de texto en una cadena
 		/// </summary>
-		internal static string LoadTextFile(string fileName)
-		{
-			return LoadTextFile(fileName, GetFileEncoding(fileName, System.Text.Encoding.UTF8));
-		}
+		internal static string LoadTextFile(string fileName) => LoadTextFile(fileName, GetFileEncoding(fileName, System.Text.Encoding.UTF8));
 
 		/// <summary>
 		/// 	Carga un archivo de texto con un encoding determinado en una cadena

@@ -166,10 +166,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Tools
 		/// <summary>
 		///		Interpreta una fecha utilizando los diferentes formatos hasta que encuentra uno correcto
 		/// </summary>
-		public static bool TryParseRfc(string value, out DateTime result)
-		{
-			return TryParseRfc3339(value, out result) || TryParseRfc822(value, out result);
-		}
+		public static bool TryParseRfc(string value, out DateTime result) => TryParseRfc3339(value, out result) || TryParseRfc822(value, out result);
 
 		/// <summary>
 		///		Interpreta una fecha utilizando los diferentes formatos hasta que encuentra uno correcto

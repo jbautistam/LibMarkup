@@ -14,10 +14,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		/// <summary>
 		///		Graba los datos de un archivo XML
 		/// </summary>
-		public bool Save(string fileName, MLFile fileML)
-		{
-			return Save(fileName, fileML, out _);
-		}
+		public bool Save(string fileName, MLFile fileML) => Save(fileName, fileML, out _);
 
 		/// <summary>
 		///		Graba los datos de un archivo XML
@@ -130,7 +127,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 				}
 				else if (!string.IsNullOrEmpty(nodeML.Value))
 				{
-					if (nodeML.Value.IndexOf("<![CDATA[") > 0) // ... si la cadena tenía ya un CDATA
+					if (nodeML.Value.IndexOf("<![CDATA[") >= 0) // ... si la cadena tenía ya un CDATA
 						Add(indent + 1, nodeML.Value);
 					else
 						_sbXML.Append(EncodeHTML(nodeML.Value));
@@ -207,7 +204,7 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 			// Quita los caracteres raros
 			if (!string.IsNullOrEmpty(value))
 			{
-				value = value.Replace("&", "&amp;");
+				value = value.Replace("&", "&amp;"); // ... esto tiene que ser lo primero
 				value = value.Replace("<", "&lt;");
 				value = value.Replace(">", "&gt;");
 				value = value.Replace("\"", "&quot;");
@@ -224,9 +221,6 @@ namespace Bau.Libraries.LibMarkupLanguage.Services.XML
 		/// <summary>
 		///		Indica que es un nodo que se debe autocerrar
 		/// </summary>
-		private bool IsAutoClose(MLNode nodeML)
-		{
-			return string.IsNullOrEmpty(nodeML.Value) && (nodeML.Nodes == null || nodeML.Nodes.Count == 0);
-		}
+		private bool IsAutoClose(MLNode nodeML) => string.IsNullOrEmpty(nodeML.Value) && (nodeML.Nodes == null || nodeML.Nodes.Count == 0);
 	}
 }

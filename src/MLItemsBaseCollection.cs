@@ -20,18 +20,12 @@ namespace Bau.Libraries.LibMarkupLanguage
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string name)
-		{
-			return Add(null, name, string.Empty);
-		}
+		public TypeData Add(string name) => Add(null, name, string.Empty);
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string name, string value)
-		{
-			return Add(null, name, value);
-		}
+		public TypeData Add(string name, string value) => Add(null, name, value);
 
 		/// <summary>
 		///		Añade un nodo a la colección si no está vacío
@@ -63,50 +57,32 @@ namespace Bau.Libraries.LibMarkupLanguage
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string name, bool value)
-		{
-			return Add(null, name, value);
-		}
+		public TypeData Add(string name, bool value) => Add(null, name, value);
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string name, double? value)
-		{
-			return Add(null, name, value);
-		}
+		public TypeData Add(string name, double? value) => Add(null, name, value);
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string name, DateTime? value)
-		{
-			return Add(null, name, value);
-		}
+		public TypeData Add(string name, DateTime? value) => Add(null, name, value);
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string prefix, string name, bool value)
-		{
-			return Add(prefix, name, MLItemBase.Format(value));
-		}
+		public TypeData Add(string prefix, string name, bool value) => Add(prefix, name, MLItemBase.Format(value));
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string prefix, string name, double? value)
-		{
-			return Add(prefix, name, MLItemBase.Format(value));
-		}
+		public TypeData Add(string prefix, string name, double? value) => Add(prefix, name, MLItemBase.Format(value));
 
 		/// <summary>
 		///		Añade un nodo a la colección
 		/// </summary>
-		public TypeData Add(string prefix, string name, DateTime? value)
-		{
-			return Add(prefix, name, MLItemBase.Format(value));
-		}
+		public TypeData Add(string prefix, string name, DateTime? value) => Add(prefix, name, MLItemBase.Format(value));
 
 		/// <summary>
 		///		Añade un nodo a la colección
