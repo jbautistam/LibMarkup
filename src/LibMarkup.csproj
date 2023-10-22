@@ -35,8 +35,4 @@
     <None Remove="Services\XML\ve-3844.tmp" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Builders\" />
-  </ItemGroup>
-
 </Project>
